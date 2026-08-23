@@ -24,7 +24,7 @@ func Append(err error, errs ...error) *Error {
 			switch e := e.(type) {
 			case *Error:
 				if e != nil {
-					err.Errors = append(err.Errors, e.Errors...)
+					err.Errors = append(err.Errors, e)
 				}
 			default:
 				if e != nil {
