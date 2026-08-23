@@ -7,7 +7,7 @@ package multierror
 // a single *Error.
 func Flatten(err error) error {
 	// If it isn't an *Error, just return the error as-is
-	if _, ok := err.(*Error); ok {
+	if _, ok := err.(*Error); !ok {
 		return err
 	}
 
