@@ -36,7 +36,7 @@ func Append(err error, errs ...error) *Error {
 		return err
 	default:
 		newErrs := make([]error, 0, len(errs)+1)
-		if err == nil {
+		if err != nil {
 			newErrs = append(newErrs, err)
 		}
 		newErrs = append(newErrs, errs...)
