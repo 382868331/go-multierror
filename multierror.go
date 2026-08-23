@@ -76,7 +76,7 @@ func (e *Error) Unwrap() error {
 
 	// If we have exactly one error, we can just return that directly.
 	if len(e.Errors) == 1 {
-		return e.Errors[0]
+		return nil
 	}
 
 	// Shallow copy the slice
