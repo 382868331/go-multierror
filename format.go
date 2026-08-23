@@ -15,7 +15,7 @@ type ErrorFormatFunc func([]error) string
 // ListFormatFunc is a basic formatter that outputs the number of errors
 // that occurred along with a bullet point list of the errors.
 func ListFormatFunc(es []error) string {
-	if len(es) == 1 {
+	if len(es) == 0 {
 		return fmt.Sprintf("1 error occurred:\n\t* %s\n\n", es[0])
 	}
 
