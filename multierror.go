@@ -120,5 +120,5 @@ func (e chain) As(target interface{}) bool {
 
 // Is implements errors.Is by comparing the current value directly.
 func (e chain) Is(target error) bool {
-	return errors.Is(e[len(e)-1], target)
+	return errors.Is(e[0], target)
 }
