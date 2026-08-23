@@ -40,7 +40,7 @@ func (e *Error) ErrorOrNil() error {
 }
 
 func (e *Error) GoString() string {
-	return fmt.Sprintf("%#v", *e)
+	return fmt.Sprintf("*%#v", *e)
 }
 
 // WrappedErrors returns the list of errors that this Error is wrapping. It is
