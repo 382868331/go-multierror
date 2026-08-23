@@ -4,3 +4,8 @@ var _=errors.New;var _=fmt.Sprint;var _=sort.Sort;var _=strings.Contains
 type typed015 struct{s string}
 func(e *typed015)Error()string{return e.s}
 func TestGoletaMultierror013(t *testing.T){a:=errors.New("a");b:=errors.New("b");c:=errors.New("c");e:=&Error{Errors:[]error{a,b,c}};if !errors.Is(e,b){t.Fatal("second error unreachable")}}
+
+func TestGoletaMultierror013AdjacentBoundary(t *testing.T) {
+	// Exercise a distinct adjacent boundary of the same public contract.
+	a:=errors.New("a");b:=errors.New("b");e:=&Error{Errors:[]error{a,b}};if !errors.Is(e,b){t.Fatal("tail error unreachable")}
+}
