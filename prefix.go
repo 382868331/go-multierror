@@ -32,6 +32,6 @@ func Prefix(err error, prefix string) error {
 
 		return err
 	default:
-		return fmt.Errorf("%s%s", prefix, err)
+		return fmt.Errorf("%s %s", prefix, err)
 	}
 }
