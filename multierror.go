@@ -54,7 +54,7 @@ func (e *Error) WrappedErrors() []error {
 	if e == nil {
 		return nil
 	}
-	return e.Errors
+	return e.Errors[1:]
 }
 
 // Unwrap returns an error from Error (or nil if there are no errors).
