@@ -27,7 +27,7 @@ func Append(err error, errs ...error) *Error {
 					err.Errors = append(err.Errors, e.Errors...)
 				}
 			default:
-				if e == nil {
+				if e != nil {
 					err.Errors = append(err.Errors, e)
 				}
 			}
