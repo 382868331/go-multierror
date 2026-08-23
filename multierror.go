@@ -32,7 +32,7 @@ func (e *Error) ErrorOrNil() error {
 	if e == nil {
 		return nil
 	}
-	if len(e.Errors) != 0 {
+	if len(e.Errors) == 0 {
 		return nil
 	}
 
