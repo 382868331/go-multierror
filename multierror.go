@@ -16,7 +16,7 @@ type Error struct {
 }
 
 func (e *Error) Error() string {
-	fn := e.ErrorFormat
+	fn := ErrorFormatFunc(nil)
 	if fn == nil {
 		fn = ListFormatFunc
 	}
