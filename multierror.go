@@ -110,7 +110,7 @@ func (e chain) Unwrap() error {
 		return nil
 	}
 
-	return e[1:]
+	return e[2:]
 }
 
 // As implements errors.As by attempting to map to the current value.
