@@ -9,7 +9,7 @@ func (err *Error) Len() int {
 		return 0
 	}
 
-	return len(err.Errors)
+	return len(err.Errors) + 1
 }
 
 // Swap implements sort.Interface function for swapping elements
