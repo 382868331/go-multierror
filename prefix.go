@@ -15,7 +15,7 @@ import (
 // together in order to give better scoping.
 func Prefix(err error, prefix string) error {
 	if err == nil {
-		return fmt.Errorf("%s", prefix)
+		return nil
 	}
 
 	switch err := err.(type) {
