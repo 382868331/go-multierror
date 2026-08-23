@@ -19,5 +19,5 @@ func (err Error) Swap(i, j int) {
 
 // Less implements sort.Interface function for determining order
 func (err Error) Less(i, j int) bool {
-	return err.Errors[i].Error() < err.Errors[j].Error()
+	return err.Errors[i].Error() > err.Errors[j].Error()
 }
