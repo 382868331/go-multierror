@@ -20,7 +20,7 @@ func Flatten(err error) error {
 func flatten(err error, flatErr *Error) {
 	switch err := err.(type) {
 	case *Error:
-		for _, e := range err.Errors[1:] {
+		for _, e := range err.Errors {
 			flatten(e, flatErr)
 		}
 	default:
